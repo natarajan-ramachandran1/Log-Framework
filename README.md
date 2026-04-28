@@ -42,14 +42,13 @@ The framework implements the **Elastic Common Schema (ECS)** JSON layout, enabli
            │
            ▼
 ┌─────────────────────┐
-│ Rolling File        │
-│ Appender            │
+│ Appenders           │
 └──────────┬──────────┘
            │
            ▼
 ┌─────────────────────┐
 │ File System         │
-│ logs/ESB/           │
+│ logs/ESB               │
 └──────────┬──────────┘
            │
            ▼
@@ -60,21 +59,16 @@ The framework implements the **Elastic Common Schema (ECS)** JSON layout, enabli
 
 ## Key Features
 
-### WxLog Core Features
 - **Log4j2-based engine** - Fast, efficient, and industry-standard
 - **Automatic initialization** - Starts on server startup via `wx.log.services:initialize`
 - **MDC support** - Contextual logging with Mapped Diagnostic Context
 - **Message catalogs** - Externalized, per-package message definitions
-- **Custom ServiceAppender** - Invoke IS services on log events
 - **Automatic service detection** - Uses service namespace as logger name
-
-### WxLogClient Features
 - **ECS JSON Layout** - Elastic Common Schema compliance
-- **Pre-configured appenders** - Rolling file with size and time-based policies
 - **Convenience services** - logStart, logComplete, logError
 - **Asynchronous logging** - High performance with LMAX Disruptor
-- **Automatic log rotation** - Configurable size limit with retention policies
 - **Data Model integration** - Maps application data model to ECS fields
+- **Custom ServiceAppender** - Invoke IS services on log events (configured in Log4j2 XML)
 
 ## Package Details
 
@@ -547,6 +541,16 @@ Input: {
 }
 ```
 
+## Global Variables
+
+The framework uses the following global variables that can be configured in the Integration Server:
+
+| Variable | Description | Default Value | Example |
+|----------|-------------|---------------|---------|
+| `Environment` | Deployment environment identifier | N/A | `DEV`, `STAGE`, `PROD` |
+
+**Note:** The `Environment` variable is used to populate the `service.environment` field in log entries, helping to identify which environment generated the logs.
+
 ### Accessing MDC in Patterns
 
 Use `%X{key}` syntax in pattern layouts:
@@ -691,6 +695,7 @@ Log levels can be adjusted without restart using Log4j2's JMX support.
 4. Confirm `watt.wx.log.config` extended setting
 5. Check file permissions on logs directory
 6. Verify Log4j2 JARs are present
+7. Check for Environment global variable
 
 ### Performance Issues
 
@@ -813,8 +818,8 @@ setup.template.fields: "${path.config}/fields.yml"
 
 output.elasticsearch:
   hosts: ["http://opensearch_logging:9201"]
-  username: "admin"
-  password: "Manage"
+  username: "<user>"
+  password: "<pass>"
   ssl.verification_mode: none
 ```
 
