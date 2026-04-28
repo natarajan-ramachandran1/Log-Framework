@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug">
+  <Appenders>
+
+    <Console name="Console">
+      <!--PatternLayout charset="UTF-8" pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg %n"/-->
+      <EcsLayout />      
+    </Console>
+
+    <!--RollingFile name="ESB" fileName="logs/ESB/api_ecs.log" filePattern="logs/ESB/$${date:yyyy-MM}/api_ecs-%d{MM-dd-yyyy}-%i.log.gz"-->
+    <RollingFile name="ESB" fileName="logs/ESB/api_ecs.log" filePattern="logs/ESB/%d{yyyy-MM}/api_ecs-%d{MM-dd-yyyy}-%i.log">
+      <!--PatternLayout charset="UTF-8" pattern="%d{HH:mm:ss.SSS} [%t] %-5level %X{callingServiceName} %X{rootContextID} %msg %n"/-->
+      <EcsLayout />
+      <Policies>
+        <TimeBasedTriggeringPolicy />
+        <!--SizeBasedTriggeringPolicy size="10 MB"/-->
+        <SizeBasedTriggeringPolicy size="250 MB" />
+      </Policies>
+      <DefaultRolloverStrategy>
+        <Delete basePath="logs/ESB" maxDepth="2">
+          <IfFileName glob="api_ecs-*.log"/>
+          <IfLastModified age="3d"/>
+        </Delete>
+      </DefaultRolloverStrategy>
+    </RollingFile>
+
+  </Appenders>
+  <Loggers>
+
+    <logger name="ESB" level="DEBUG" additivity="false">
+      <AppenderRef ref="ESB"/>
+    </logger>
+
+    <Root level="INFO">
+      <AppenderRef ref="Console"/>
+    </Root>
+
+  </Loggers>
+</Configuration>

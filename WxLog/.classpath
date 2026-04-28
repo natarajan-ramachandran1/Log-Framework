@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="code/source"/>
+	<classpathentry kind="lib" path="C:/SoftwareAG105/common/lib/wm-isclient.jar"/>
+	<classpathentry kind="lib" path="C:/SoftwareAG105/IntegrationServer/lib/wm-isserver.jar"/>
+	<classpathentry kind="lib" path="code/jars/log4j-api.jar"/>
+	<classpathentry kind="lib" path="code/jars/log4j-core.jar"/>
+	<classpathentry kind="output" path="code/classes"/>
+</classpath>

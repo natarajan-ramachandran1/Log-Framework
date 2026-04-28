@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">mergeDocuments</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJzb3IoKTsNCklEYXRh
+IG1kYyA9IElEYXRhVXRpbC5nZXRJRGF0YShwaXBlbGluZUN1cnNvciwgIm1kYyIpOw0KSURhdGEg
+Y3VzdG9tID0gSURhdGFVdGlsLmdldElEYXRhKHBpcGVsaW5lQ3Vyc29yLCAiY3VzdG9tIik7DQoN
+CmlmIChtZGMgPT0gbnVsbCkNCnsNCgltZGMgPSBJRGF0YUZhY3RvcnkuY3JlYXRlKCk7DQp9DQoN
+CmlmIChjdXN0b20gIT0gbnVsbCkNCnsNCglJRGF0YUN1cnNvciBjdXN0b21DdXJzb3IgPSBjdXN0
+b20uZ2V0Q3Vyc29yKCk7DQoJSURhdGFDdXJzb3IgbWRjQ3Vyc29yID0gbWRjLmdldEN1cnNvcigp
+Ow0KCXdoaWxlIChjdXN0b21DdXJzb3IubmV4dCgpKQ0KCXsNCgkJSURhdGFVdGlsLnB1dChtZGND
+dXJzb3IsIGN1c3RvbUN1cnNvci5nZXRLZXkoKSwgY3VzdG9tQ3Vyc29yLmdldFZhbHVlKCkpOw0K
+CX0NCgljdXN0b21DdXJzb3IuZGVzdHJveSgpOw0KCW1kY0N1cnNvci5kZXN0cm95KCk7DQp9DQoN
+CklEYXRhVXRpbC5wdXQocGlwZWxpbmVDdXJzb3IsICJtZGMiLCBtZGMpOw0KcGlwZWxpbmVDdXJz
+b3IuZGVzdHJveSgpOw==</value>
+</Values>
