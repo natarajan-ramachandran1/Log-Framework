@@ -52,7 +52,7 @@ The enhanced framework now implements the **Elastic Common Schema (ECS)** JSON l
            ▼
 ┌─────────────────────┐
 │ File System         │
-│ logs/ESB               │
+│ logs/ESB            │
 └──────────┬──────────┘
            │
            ▼
