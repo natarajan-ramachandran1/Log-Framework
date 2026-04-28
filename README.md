@@ -2,14 +2,18 @@
 
 ## Overview
 
-The **WxLog Framework** is an enterprise-grade logging solution for webMethods Integration Server, designed to provide unified, structured logging across all integration services. It consists of two complementary packages that work together to deliver fast, efficient, and ECS-compliant logging capabilities.
+The **WxLog Framework** is an enterprise-grade logging solution for webMethods Integration Server, designed to provide unified, structured logging across all integration services.
+
+### Evolution
+
+The WxLog framework has been serving as a reliable logging utility for webMethods Integration Server for several years. In its latest iteration, the framework has been significantly enhanced to meet modern observability requirements by incorporating **Elastic Common Schema (ECS)** compliance. This upgrade enables organizations to leverage industry-standard log formats and integrate seamlessly with the Elastic Stack ecosystem for advanced log management, analysis, and monitoring.
 
 ### Package Components
 
 - **WxLog** (v1.0) - Core logging engine built on Apache Log4j2
 - **WxLogClient** (v1.0) - Client utilities and convenience services
 
-The framework implements the **Elastic Common Schema (ECS)** JSON layout, enabling seamless integration with Elastic Stack for centralized log management, analysis, and monitoring.
+The enhanced framework now implements the **Elastic Common Schema (ECS)** JSON layout, providing structured, standardized logging that integrates directly with Elasticsearch, Kibana, and other ECS-compatible platforms.
 
 ## Architecture
 
