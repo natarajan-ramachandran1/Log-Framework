@@ -833,7 +833,7 @@ output.elasticsearch:
 
 - **ECS Documentation:** https://www.elastic.co/docs/reference/ecs
 - **Log4j2 Documentation:** https://logging.apache.org/log4j/2.x/
-- **webMethods Documentation:** Software AG Documentation Portal
+- **webMethods Documentation:** https://www.ibm.com/docs/en/webmethods-integration/wm-integration-server
 
 ## Version History
 
